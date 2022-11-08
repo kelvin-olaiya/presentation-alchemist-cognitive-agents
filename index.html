@@ -78,7 +78,7 @@ fortemente infuenzabile.</li>
 </li>
 <li>
 <p>Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo
-i principi del Network Oriented Modelling</p>
+i principi del <em>Network Oriented Modelling</em></p>
 </li>
 </ul>
 <table>
@@ -112,7 +112,7 @@ i principi del Network Oriented Modelling</p>
 <p>Esistono tre livelli di dettaglio nella rappresentazione di un pedone:</p>
 <ul>
 <li>
-<p><strong>Pedone omogeneo</strong>: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;</p>
+<p><strong>Pedone omogeneo</strong>: pedone con una velocità predefinita di camminata e di corsa uguale per tutti;</p>
 </li>
 <li>
 <p><strong>Pedone eterogeneo</strong>: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocità,
@@ -162,7 +162,6 @@ elementi fondamentali per l’orientamento.</p>
 <ul>
 <li><strong>V</strong>: poligoni convessi rappresentanti le <em>walkable areas</em></li>
 <li><strong>E</strong>: rappresentano le connessioni tra aree</li>
-<li></li>
 </ul>
 </li>
 </ul>
@@ -226,6 +225,12 @@ in corsa del pedone)</p>
 </ul>
 <p><img src="pushing_behavior.jpeg" alt="pushing behavior"></p>
 </section><section>
+<h2 id="miglioramenti-al-simulatore">Miglioramenti al simulatore</h2>
+<ul>
+<li>Nodi configurabili tramite la composizione di <em>proprietà</em></li>
+<li>Reificazione del concetto di <em>reazione globale</em></li>
+</ul>
+</section><section>
 <h1 id="simulazione">Simulazione</h1>
 <h2 id="evacuazione-di-folla-in-piazza-san-carlo-torino">Evacuazione di folla in Piazza San Carlo, Torino</h2>
 </section><section>
@@ -238,7 +243,7 @@ in corsa del pedone)</p>
 </ul>
 </li>
 </ul>
-<p>Descrizione completa disponibile nel <a href="https://alchemistsimulator.github.io/showcase/2022-turin/">sito ufficiale</a></p>
+<p>Descrizione più dettagliata nel <a href="https://alchemistsimulator.github.io/showcase/2022-turin/">sito ufficiale</a></p>
 </section><section>
 <h2 id="simulazione-1">Simulazione</h2>
 
@@ -254,6 +259,18 @@ in corsa del pedone)</p>
 <li>I pedoni che hanno avuto esperienza diretta con il pericolo fuggono spingendo coloro che non hanno ancora visto nulla.</li>
 <li>L’onda, simile a quella osservata nei filmati che ritraggono la tragedia realmente accaduta,
 derivante dalle spinte dei pedoni in fuga.</li>
+</ul>
+</section><section>
+<h2 id="osservazioni">Osservazioni</h2>
+<ul>
+<li>E’ necessario un tuning della frequenza del motore del simulatore per un’esecuzione in tempo reale della simulazione</li>
+<li>Nella simulazione i pedoni sono <em>sordi</em> e un campo visivo “statico”</li>
+</ul>
+<h2 id="possibili-sviluppi-futuri">Possibili sviluppi futuri</h2>
+<ul>
+<li>Attribuire una forma più realistica ed eterogenea ai pedoni</li>
+<li>Predisporre il simulatore per gestire anche gli ostacoli mobili</li>
+<li>Considerare differenze culturali tra i vari pedoni</li>
 </ul>
 </section><section>
 </section>
