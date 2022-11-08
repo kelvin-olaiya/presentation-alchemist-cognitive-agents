@@ -1,321 +1,225 @@
- 
 +++
-
-title = "Guide for writing markdown slides"
-description = "A Hugo theme for creating Reveal.js presentations"
+title = "Simualazione di evacuazione di folle con micro-interazioni fisiche ed elementi cognitivi"
 outputs = ["Reveal"]
-aliases = [
-    "/guide/"
-]
-
 +++
 
+# Agenti cognitivi in Alchemist per la simulazione di evacuazioni di folle
 
-# Hello
-
----
-
-# Headers
-
-# H1
-## H2
-### H3
-#### H4
+## **Stato dell'arte**
 
 ---
 
-# Text
+# OVERVIEW
 
-normal text
+1. Modello del pedone cognitivo
+    - Modello IMPACT
+    - Il pedone cognitivo
+    - Movimento del pedone cognitivo
 
-`inline code`
+2. Modello di mappa mentale per l'orientamento dei pedoni cognitivi
+    - Grafo dell'ambiente e mappa cognitiva
 
-*italic*
+3. Modello fisico del movimento del pedone cognitivo
+    - Il modello HiDAC
+    - Forze di evitamento e repulsione
+    - Cadute e spinte
 
-**bold**
-
-**_emphasized_**
-
-*__emphasized alternative__*
-
-~~strikethrough~~
-
-[link](http://www.google.com)
-
----
-
-# Lists and enums
-
-1. First ordered list item
-1. Another item
-    * Unordered sub-list.
-    * with two items
-        * another sublist
-            1. With a sub-enum
-            1. yay!
-1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
-1. And another item.
+4. Simulazione Evacuazione di folla in Piazza San Carlo, Torino
 
 ---
 
-# Inline images
+# Modello del pedone cognitivo
 
-![Alternative text](https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg)
-
----
-
-## Fallback to shortcodes for resizing
-
-Autoresize specifying
-
-* `max-w` (percent of parent element width) and/or `max-h` (percent of viewport height) as max sizes , and
-* `width` and/or `height` as *exact* sizes (as percent of viewport size)
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" max-h="20">}}
+[D. Mazzieri 2019](https://amslaurea.unibo.it/id/eprint/19084)
 
 ---
 
-## Low res, plain markdown
+## Il modello IMPACT
 
-![](https://upload.wikimedia.org/wikipedia/it/thumb/6/6c/Scavolino_innevata.jpg/260px-Scavolino_innevata.jpg)
+* Nasce con l'obiettivo di non limitarsi alle sole leggi fisiche nella modellazione
+di agenti ma considerare le caratteristiche socio-culturali nonché una componente emotiva
+fortemente infuenzabile.
 
----
 
-## Hi res, plain markdown
-
-![](https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg)
-
----
-
-## Low res, default
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/thumb/6/6c/Scavolino_innevata.jpg/260px-Scavolino_innevata.jpg" >}}
+Ogni agente è contraddistinto da:
+  * età (bambino, adulto, anziano); 
+  * sesso (uomo, donna).
 
 ---
 
-## Hi res, default
+## Il modello IMPACT
 
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" >}}
+* Le combinazioni di questi due attributi determinano un insieme di caratteristiche statiche e dinamiche.
 
----
+* Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo 
+i principi del Network Oriented Modelling
 
-## Low res, enlarged horizontally
+<table>
+    <tr>
+        <th colspan="2">Caratteristiche</th>
+    </tr>
+    <tr>
+        <td>STATICHE</td>
+        <td>ATTIVE</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Velocità</li>
+                <li>Conformità alle regole</li>
+                <li>Attidudine ad aituare</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Sensazione di pericolo</li>
+                <li>Paura</li>
+                <li>Desiderio/Intenzione di fuggire</li>
+                <li>Desiderio/Intenzione di non fuggire</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
-{{< image src="https://upload.wikimedia.org/wikipedia/it/thumb/6/6c/Scavolino_innevata.jpg/260px-Scavolino_innevata.jpg" width="100">}}
+--- 
 
----
+## Il pedone cognitivo
 
-## Low res, enlarged vertically
+Esistono tre livelli di dettaglio nella rappresentazione di un pedone:
 
-{{< image src="https://upload.wikimedia.org/wikipedia/it/thumb/6/6c/Scavolino_innevata.jpg/260px-Scavolino_innevata.jpg" height="100">}}
+* **Pedone omogeneo**: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;
 
----
+* **Pedone eterogeneo**: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocità,
+conformità alle regole e attitudine ad aiutare;
 
-## Hi res, reduced horizontally
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" width="50">}}
-
----
-
-## Hi res, reduced vertically
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" height="50">}}
-
----
-
-## Hi res, reducing maximum expansion horizontally
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" max-w="50">}}
-
----
-
-## Hi res, reducing maximum expansion vertically
-
-{{< image src="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" max-h="50">}}
-
----
-
-{{< slide background-image="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" >}}
-
-# Large images as background
-## (May affect printing)
-
----
-
-{{< slide background-image="https://upload.wikimedia.org/wikipedia/it/6/6c/Scavolino_innevata.jpg" state="blur-animation-light"  transition="fade-in fade-out" >}}
-
-# Also available with blur and custom transitions
-## (May affect printing)
+* **Pedone cognitivo**: pedone eterogeneo con delle emozioni, capace di influenzare e farsi 
+influenzare dagli altri.
 
 ---
 
-# $$\LaTeX{}$$
+## Movimento del pedone cognitivo
 
+* I movimenti del pedone cognitivo in Alchemist seguono i comportamenti di steering introdotti da Reynolds.
+* Hanno la funzione di muovere in maniera autonoma e realistica gli agenti sui quali non 
+si possiede controllo.
 
-Inline equations like $E=mc^2$
+* I comportamenti di steering sono basati sulla semplice formula:
 
-$$\frac{n!}{k!(n-k)!} = \binom{n}{k}$$  
-
----
-
-# Code snippets
-
-
-```kotlin
-val x = pippo
-```
-
-```go
-package main
- 
-import "fmt"
- 
-func main() {
-    fmt.Println("Hello world!")
-}
-```
+steering = desired_velocity - current_velocity
 
 ---
 
-# Tables
+# Modello di mappa mentale per l'orientamento del pedone cognitivo
 
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
+[L. Paganelli 2020](https://amslaurea.unibo.it/id/eprint/20540)
 
 ---
 
-# Quotes
+## Mappa mentale del pedone cognitivo
 
-> Multiple
-> lines
-> of
-> a
-> single
-> quote
-> get
-> joined
+* Struttura che modella la conoscenza spaziale di ciascun pedone, composta di:
+  * **oggetti**: costituiscono tipicamente dei punti di riferimento per il pedone 
+  * **relazioni spaziali**: connessioni dirette od indirette tra gli oggetti
 
-> Very long one liners of Markdown text automatically get broken into a multiline quotation, which is then rendered in the slides.
+* Gli oggetti prendono il nome di **landmarks** e assieme alle relazioni spaziali costituiscono gli
+elementi fondamentali per l'orientamento.
+
+## Grafo dell'ambiente
+
+* L'ambiente viene modellato mediante un grafo di navigazione G=(V,E)
+  * **V**: poligoni convessi rappresentanti le *walkable areas*
+  * **E**: rappresentano le connessioni tra aree
+  * 
+---
+
+# Mappa mentale
+
+![cognitive map](cognitive_map.png)
 
 ---
 
-# Fragments
+# Grafo dell'ambiente
 
-* {{< frag c="pluto" >}}
-* {{< frag c="pluto" >}}
-* {{< frag c="pluto" >}}
+![navigation graph](navigation-graph.jpeg)
 
 ---
 
-# Graphs via Gravizo
+# Modello fisico del movimento del pedone cognitivo
 
-{{< gravizo "Example Gravizo graph" >}}
-  digraph G {
-    aize ="4,4";
-    main [shape=box];
-    main -> parse [weight=8];
-    parse -> execute;
-    main -> init [style=dotted];
-    main -> cleanup;
-    execute -> { make_string; printf}
-    init -> make_string;
-    edge [color=red];
-    main -> printf [style=bold,label="100 times"];
-    make_string [label="make a string"];
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    execute -> compare;
-  }
-{{< /gravizo >}}
+[K. Olaiya 2022](https://amslaurea.unibo.it/id/eprint/26455)
 
 ---
 
-# Graphs via mermaid.js
+## Il modello HiDAC
+Modello a forze sociali di riferimento (Pelechano et al.) .
 
-```mermaid
-classDiagram
-  Class01 <|-- AveryLongClass : Coosssl
-  Class03 *-- Class04
-  Class05 o-- Class06
-  Class07 .. Class08
-  Class09 --> C2 : Where am i?
-  Class09 --* C3
-  Class09 --|> Class07
-  Class07 : equals()
-  Class07 : Object[] elementData
-  Class01 : size()
-  Class01 : int chimp
-  Class01 : int gorillasaaaaaaaaaaaaaaaaaaaaaa
-  Class08 <--> C2: Cool label
-```
+* Considerazioni:
 
+  * Ogni pedone desidera muoversi con una certa velocità in una determinata direzione
+  * Nel compiere questo spostamento vuole mantenere una certa distanza dai muri e dagli altri pedoni
+
+* HiDAC prevede:
+
+  * Uno strato di alto livello, equivalente al modello cognitivo introdotto in Alchemist, 
+  che individua il prossimo punto che si vuole raggiungere
+
+  * Uno strato di basso livello che aggiusta il punto d'interesse sulla base di vincoli ed interazioni 
+  di natura fisica.
 
 ---
 
+## Forze di evitamento e di repulsione
 
-# Graphs via mermaid.js with options
+* La **forza di evitamento** è una forza tangenziale con lo scopo di curvare la traiettoria dei pedoni per 
+evitare collisioni tra essi. 
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': { 'fontSize': '.34em', 'fontFamily': 'verdana' }}}%%
-classDiagram
-  Class01 <|-- AveryLongClass : Coosssl
-  Class03 *-- Class04
-  Class05 o-- Class06
-  Class07 .. Class08
-  Class09 --> C2 : Where am i?
-  Class09 --* C3
-  Class09 --|> Class07
-  Class07 : equals()
-  Class07 : Object[] elementData
-  Class01 : size()
-  Class01 : int chimp
-  Class01 : int gorillasaaaaaaaaaaaaaaaaaaaaaa
-  Class08 <--> C2: Cool label
-```
+![avoidance](avoidance_force.jpeg)
 
-
----
-# Graphs via mermaid.js 2
-
-```mermaid
-graph TD
-  SL([fa:fa-user second level]) --> L[solution]
-  L -- solution email --> db[(mysql)]
-  db --> X[automatic] 
-  X --> CM([fa:fa-users first level])
-  db -- Email --> c([customer support]);
-```
+* La **forza di repulsione** entra in gioco quando un pedone si vede occupare la sua area di comfort da un
+altro pedone
 
 ---
 
-# Graphs via mermaid.js 3
+## Cadute e spinte
 
-```mermaid
-gitGraph
-  commit id: "Initialize project"
-  commit id: "Make some changes"
-  branch develop
-  checkout develop
-  commit
-  commit
-  checkout main
-  merge develop
-  commit
-  commit
-```
+* E' possibile far emergere comportamenti di spinte attribuendo soglie di spazio interpersonale differenti
+a ciascun pedone.
+
+* La caduta di un pedone si verifica quando la risultante delle forze di repulsione che riceve è 
+sufficientemente grande da fargli perdere l'equilibrio (es. il modulo della forza supera il modulo della velocità
+in corsa del pedone)
+
+![pushing behavior](pushing_behavior.jpeg)
+
+--- 
+
+# Simulazione
+## Evacuazione di folla in Piazza San Carlo, Torino
 
 ---
 
-# Import of shared slides
+## Descrizione
 
-{{% import path="shared-slides/devops/devops-intro.md" %}}
+* In una riproduzione di Piazza San Carlo sono stati posizionati:
+  * oltre 40,000 nodi cognitivi di eta e generi diversi. 
+  * una zona di pericolo nel punto si presumibilmente ha avuto origine l'isteria di massa.
 
+Descrizione completa disponibile nel [sito ufficiale](https://alchemistsimulator.github.io/showcase/2022-turin/)
+
+---
+
+## Simulazione
+
+{{< youtube owrbB-F12oQ >}}
+
+---
+
+## Risultati
+Una volta avviata la simulazione è possibile osservare:
+
+* come il panico si diffonda sulla folla per via del contagio sociale. 
+* I pedoni che hanno avuto esperienza diretta con il pericolo fuggono spingendo coloro che non hanno ancora visto nulla.
+* L'onda, simile a quella osservata nei filmati che ritraggono la tragedia realmente accaduta,
+derivante dalle spinte dei pedoni in fuga.
+
+---
