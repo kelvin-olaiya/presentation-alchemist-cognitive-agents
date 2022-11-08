@@ -236,6 +236,7 @@ derivante dalle spinte dei pedoni in fuga.
 * E' necessario un tuning della frequenza del motore del simulatore per un'esecuzione in tempo reale della simulazione
 * Nella simulazione i pedoni sono *sordi* e un campo visivo "statico"
 
+
 ## Possibili sviluppi futuri
 
 * Attribuire una forma più realistica ed eterogenea ai pedoni
