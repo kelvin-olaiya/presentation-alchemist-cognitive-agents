@@ -52,7 +52,7 @@ Ogni agente è contraddistinto da:
 * Le combinazioni di questi due attributi determinano un insieme di caratteristiche statiche e dinamiche.
 
 * Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo 
-i principi del Network Oriented Modelling
+i principi del *Network Oriented Modelling*
 
 <table>
     <tr>
@@ -87,7 +87,7 @@ i principi del Network Oriented Modelling
 
 Esistono tre livelli di dettaglio nella rappresentazione di un pedone:
 
-* **Pedone omogeneo**: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;
+* **Pedone omogeneo**: pedone con una velocità predefinita di camminata e di corsa uguale per tutti;
 
 * **Pedone eterogeneo**: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocità,
 conformità alle regole e attitudine ad aiutare;
@@ -129,7 +129,7 @@ elementi fondamentali per l'orientamento.
 * L'ambiente viene modellato mediante un grafo di navigazione G=(V,E)
   * **V**: poligoni convessi rappresentanti le *walkable areas*
   * **E**: rappresentano le connessioni tra aree
-  * 
+
 ---
 
 # Mappa mentale
@@ -191,7 +191,14 @@ in corsa del pedone)
 
 ![pushing behavior](pushing_behavior.jpeg)
 
---- 
+---
+
+## Miglioramenti al simulatore
+
+* Nodi configurabili tramite la composizione di *proprietà*
+* Reificazione del concetto di *reazione globale*
+
+---
 
 # Simulazione
 ## Evacuazione di folla in Piazza San Carlo, Torino
@@ -204,7 +211,7 @@ in corsa del pedone)
   * oltre 40,000 nodi cognitivi di eta e generi diversi. 
   * una zona di pericolo nel punto si presumibilmente ha avuto origine l'isteria di massa.
 
-Descrizione completa disponibile nel [sito ufficiale](https://alchemistsimulator.github.io/showcase/2022-turin/)
+Descrizione più dettagliata nel [sito ufficiale](https://alchemistsimulator.github.io/showcase/2022-turin/)
 
 ---
 
@@ -223,3 +230,18 @@ Una volta avviata la simulazione è possibile osservare:
 derivante dalle spinte dei pedoni in fuga.
 
 ---
+
+## Osservazioni
+
+* E' necessario un tuning della frequenza del motore del simulatore per un'esecuzione in tempo reale della simulazione
+* Nella simulazione i pedoni sono *sordi* e un campo visivo "statico"
+
+## Possibili sviluppi futuri
+
+* Attribuire una forma più realistica ed eterogenea ai pedoni
+* Predisporre il simulatore per gestire anche gli ostacoli mobili
+* Considerare differenze culturali tra i vari pedoni
+
+---
+
+
