@@ -6,11 +6,9 @@
 <meta name="author" content="Kelvin Olaiya">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/presentation-alchemist-cognitive-agents/reveal-js/dist/reset.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-alchemist-cognitive-agents/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-alchemist-cognitive-agents/reveal-js/dist/reveal.css">
   <link rel="stylesheet" href="/presentation-alchemist-cognitive-agents/css/custom-theme.min.cfa18d04d15803a274df86ea0b17aa4e2b39ff6ce235bd585d0b6818a6a5f3e7.css" id="theme"><link rel="stylesheet" href="/presentation-alchemist-cognitive-agents/highlight-js/solarized-dark.min.css">
-    
 <link rel="stylesheet" href="https://gitcdn.link/repo/DanySK/css-blur-animation/master/blur.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
@@ -323,7 +321,7 @@ derivante dalle spinte dei pedoni in fuga.</li>
     }
     return map;
   }
-  
+
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
 
   var revealHugoPlugins = { 
@@ -345,28 +343,13 @@ derivante dalle spinte dei pedoni in fuga.</li>
 
 
 
+  
+
+  
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@9.1.6/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({});
-
-    let render = (event) => {
-      let mermaidElems = event.currentSlide.querySelectorAll('.mermaid');
-      if (!mermaidElems.length){
-          return
-      }
-      mermaidElems.forEach(mermaidElem => {
-          let processed = mermaidElem.getAttribute('data-processed');
-          if (!processed){
-              
-              mermaid.init(undefined, mermaidElem);
-          }
-      });
-    };
-    Reveal.addEventListener('slidechanged', render);
-    Reveal.addEventListener('ready', render);
-  </script>
 
     <script>
     MathJax = {
